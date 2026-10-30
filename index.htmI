@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>versatile — shop near you</title>
+<style>body{font-family:sans-serif;background:#f0f4ff;margin:0}header{background:#fff;padding:15px;display:flex;justify-content:space-between;box-shadow:0 2px 5px #ddd}.card{background:#fff;margin:15px;padding:15px;border-radius:15px}button{background:#2563eb;color:#fff;border:0;padding:12px;width:100%;border-radius:10px;font-weight:bold}input{width:100%;padding:12px;margin:6px 0;border:1px solid #ccc;border-radius:10px}</style>
+</head>
+<body>
+<header><b>🔷 versatile</b><span>📍 Lagos</span></header>
+<div style="padding:15px">
+<h1>Shop near you, sell globally</h1>
+<div class="card" id="products">No products yet. Be first seller!</div>
+<div class="card">
+<h3>Sell Something (Free)</h3>
+<input id="title" placeholder="Product title e.g. Flour 50kg">
+<input id="price" placeholder="Price e.g. 42000">
+<input id="phone" placeholder="WhatsApp e.g. 2348012345678">
+<button onclick="sell()">Post for Sale</button>
+</div>
+</div>
+<script>
+function sell(){
+let t=document.getElementById('title').value;
+let p=document.getElementById('price').value;
+let ph=document.getElementById('phone').value;
+if(!t||!p) return alert('Add title and price');
+document.getElementById('products').innerHTML+=`<div style="border-top:1px solid #eee;padding:10px 0"><b>${t}</b> - ₦${p}<br><a href="https://wa.me/${ph}">Chat Seller</a></div>`;
+alert('Live!');
+}
+</script>
+</body>
+</html>
