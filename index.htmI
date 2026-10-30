@@ -1,32 +1,53 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>versatile — shop near you</title>
-<style>body{font-family:sans-serif;background:#f0f4ff;margin:0}header{background:#fff;padding:15px;display:flex;justify-content:space-between;box-shadow:0 2px 5px #ddd}.card{background:#fff;margin:15px;padding:15px;border-radius:15px}button{background:#2563eb;color:#fff;border:0;padding:12px;width:100%;border-radius:10px;font-weight:bold}input{width:100%;padding:12px;margin:6px 0;border:1px solid #ccc;border-radius:10px}</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Versatile - Shop Near You, Sell Globally</title>
+<link rel="icon" href="PREMIUM-CIRCLE-ICON.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,sans-serif}
+body{background:#f8fafc}
+header{background:#0f172a;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;position:sticky;top:0}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:44px;height:44px;border-radius:12px;background:#fff;padding:3px}
+.brand span{color:#fff;font-weight:800;font-size:22px}
+nav a{color:#cbd5e1;text-decoration:none;font-weight:600;margin-left:16px;font-size:14px}
+.hero{background:radial-gradient(1000px 500px at 50% -20%, #1e293b 0%, #0f172a 70%);color:#fff;text-align:center;padding:72px 20px 64px}
+.hero-icon{width:120px;height:120px;background:#fff;border-radius:28px;padding:12px;margin:0 auto 22px;box-shadow:0 20px 40px rgba(0,0,0,0.35)}
+.hero h1{font-size:44px;line-height:1.05;font-weight:900;letter-spacing:-1.2px}
+.hero h1 span{background:linear-gradient(90deg,#60a5fa,#2dd4bf,#fb923c,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:#94a3b8;margin:18px auto 0;max-width:520px;font-size:16px}
+.btns{margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{padding:14px 28px;border-radius:999px;font-weight:800;text-decoration:none;font-size:15px}
+.primary{background:#fff;color:#0f172a}
+.secondary{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.18)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;padding:28px 20px;max-width:1050px;margin:0 auto}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:20px;padding:22px}
+.card p{color:#64748b;font-size:14px;margin-top:6px}
+</style>
 </head>
 <body>
-<header><b>🔷 versatile</b><span>📍 Lagos</span></header>
-<div style="padding:15px">
-<h1>Shop near you, sell globally</h1>
-<div class="card" id="products">No products yet. Be first seller!</div>
-<div class="card">
-<h3>Sell Something (Free)</h3>
-<input id="title" placeholder="Product title e.g. Flour 50kg">
-<input id="price" placeholder="Price e.g. 42000">
-<input id="phone" placeholder="WhatsApp e.g. 2348012345678">
-<button onclick="sell()">Post for Sale</button>
+<header>
+  <div class="brand">
+    <img src="PREMIUM-CIRCLE-ICON.png" alt="Versatile">
+    <span>Versatile</span>
+  </div>
+  <nav><a href="#">Marketplace</a><a href="#">Learn</a><a href="#">Login</a></nav>
+</header>
+<div class="hero">
+  <div class="hero-icon"><img src="PREMIUM-CIRCLE-ICON.png" style="width:100%"></div>
+  <h1>Shop near you,<br><span>sell globally</span></h1>
+  <p>All-in-one Marketplace • Global Chat • Education • Clean • Colorful • Trustworthy • Modern</p>
+  <div class="btns"><a class="btn primary" href="#">Start Selling →</a><a class="btn secondary" href="#">Explore Products</a></div>
 </div>
+<div class="grid">
+  <div class="card"><h3>🛒 Marketplace</h3><p>Buy and sell anything locally and globally with verified sellers.</p></div>
+  <div class="card"><h3>💬 Global Chat</h3><p>Real-time translation chat worldwide.</p></div>
+  <div class="card"><h3>📚 Education</h3><p>Learn skills to grow your business.</p></div>
+  <div class="card"><h3>🤝 Community</h3><p>Trusted community and secure payments.</p></div>
 </div>
-<script>
-function sell(){
-let t=document.getElementById('title').value;
-let p=document.getElementById('price').value;
-let ph=document.getElementById('phone').value;
-if(!t||!p) return alert('Add title and price');
-document.getElementById('products').innerHTML+=`<div style="border-top:1px solid #eee;padding:10px 0"><b>${t}</b> - ₦${p}<br><a href="https://wa.me/${ph}">Chat Seller</a></div>`;
-alert('Live!');
-}
-</script>
 </body>
 </html>
